@@ -7,18 +7,16 @@ html {
   background-color: rgba(220, 224, 183, 0.432);
   display: grid;
   place-items: center;
-  
-  
 }
 
 .video-container {
-	/* position: relative; */
-	height: 75.7vh;
-	object-fit: fill;
-	border-radius: 15px;
-	overflow: scroll;
-	width: 42.770vh;
-	/* scroll-snap-type: y  */
+  /* position: relative; */
+  height: 75.7vh;
+  object-fit: fill;
+  border-radius: 15px;
+  overflow: scroll;
+  width: 42.77vh;
+  /* scroll-snap-type: y  */
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
