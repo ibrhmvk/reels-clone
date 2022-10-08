@@ -11,11 +11,11 @@ html {
 
 .video-container {
   /* position: relative; */
-  height: 75.7vh;
+  height: 77.7vh;
   object-fit: fill;
   border-radius: 15px;
   overflow: scroll;
-  width: 42.77vh;
+  width: 43.6vh;
   /* scroll-snap-type: y  */
 }
 
