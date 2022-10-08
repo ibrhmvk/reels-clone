@@ -59,7 +59,7 @@ export default function App() {
   console.log(currentPlayer)
   return (
     <div className="app">
-      {loading && <div></div>}
+      {loading && <div>Loading...</div>}
       {error && (
         <div>{`There is a problem fetching the post data - ${error}`}</div>
       )}
