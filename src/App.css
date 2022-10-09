@@ -8,9 +8,25 @@
 .video-container {
   height: 77.7vh;
   object-fit: fill;
-  border-radius: 15px;
   overflow: scroll;
   width: 43.6vh;
+}
+
+@media only screen and (max-width: 500px) {
+  .video-container {
+    height: 100%;
+    width: 100%;
+  }
+}
+.bottomBar {
+  width: 43.6vh;
+  top : 87%
+}
+@media only screen and (max-width: 500px) {
+  .bottomBar {
+    width: 100vh;
+    top : 92%
+  }
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

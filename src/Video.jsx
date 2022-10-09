@@ -39,15 +39,10 @@ const Video = ({ url, name }) => {
 
   return (
     <div className="video">
-      {/* <video className="video_player snap-always snap-start" loop preload="true" ref={videoRef} onClick={onVideoClick}>
-        <source src={url} />
-      </video> */}
-
       <ReactHlsPlayer 
       className="video_player snap-always snap-start"
       loop preload="true" playerRef={playerRef} onClick={onVideoClick}
       src={url}
-
       />
       <p className='absolute z-50 top-[85%] left-4 text-white text-base font-semibold'>@{name}</p>
     </div>
