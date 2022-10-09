@@ -44,7 +44,7 @@ const Video = ({ url, name }) => {
       loop preload="true" playerRef={playerRef} onClick={onVideoClick}
       src={url}
       />
-      <p className='absolute z-50 top-[85%] left-4 text-white text-base font-semibold'>@{name}</p>
+      <p className='absolute z-50 top-[80%] left-4 text-white text-base font-semibold'>@{name}</p>
     </div>
   );
 };
