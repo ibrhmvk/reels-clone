@@ -48,8 +48,8 @@ export default function App() {
         <div>{`There is a problem fetching the post data - ${error}`}</div>
       )}
       <div className="video-container snap-mandatory snap-y scrollbar-hide shadow-2xl relative">
-        {videos && videos.map(({ video, name }) =>
-          <Video key={video} url={video} name={name} />)
+        {videos && videos.map(({ video, name , id }) =>
+          <Video key={video} url={video} name={name} index={id} />)
         }
         <div className='bg-black flex p-5 justify-between fixed z-50 items-center bottomBar'>
           <div className='w-[20px] flex flex-col justify-center items-center'>
