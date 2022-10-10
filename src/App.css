@@ -20,12 +20,12 @@
 }
 .bottomBar {
   width: 43.6vh;
-  top : 87%
+  top: 87%;
 }
 @media only screen and (max-width: 500px) {
   .bottomBar {
     width: 100vh;
-    top : 92%
+    top: 92%;
   }
 }
 

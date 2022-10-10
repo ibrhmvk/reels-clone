@@ -1,7 +1,12 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState ,useContext} from 'react'
+import { VideoContext } from '../App';
+
 
 const useElementOnScreen = (options, targetRef) => {
+    const { isAudioMuted, setIsAudioMuted } = useContext(VideoContext);
     const [isVisibile, setIsVisible] = useState()
+  
+    
 
     const callbackFunction = entries => {
         const [entry] = entries //const entry = entries[0]
@@ -15,10 +20,12 @@ const useElementOnScreen = (options, targetRef) => {
     useEffect(() => {
         const observer = new IntersectionObserver(callbackFunction, optionsMemo)
         const currentTarget = targetRef.current
+        currentTarget.muted = isAudioMuted
+        console.log(isAudioMuted,currentTarget.muted,'muted in hook')
         if (currentTarget) observer.observe(currentTarget)
-        
+
         return () => {
-        if(currentTarget) observer.unobserve(currentTarget)
+            if (currentTarget) observer.unobserve(currentTarget)
         }
     }, [targetRef, optionsMemo])
 
