@@ -4,7 +4,7 @@ import useElementOnScreen from './hooks/useElementOnScreen'
 import ReactHlsPlayer from 'react-hls-player'
 import { VideoContext } from "./App";
 
-const Video = ({ url, name , index }) => {
+const Video = ({ url, name, index }) => {
   const { isAudioMuted, setIsAudioMuted } = useContext(VideoContext);
 
 
@@ -16,30 +16,27 @@ const Video = ({ url, name , index }) => {
     rootMargin: '0px',
     threshold: 0.3
   }
-  const isVisibile= useElementOnScreen(options, playerRef)
+  const isVisibile = useElementOnScreen(options, playerRef)
 
-  
+
   const onVideoClick = () => {
 
-    if(isAudioMuted){
+    if (isAudioMuted) {
       setIsAudioMuted(false)
       // setIsMuted(false)
     }
-    else  {
+    else {
       setIsAudioMuted(true)
-
-
-    } 
+    }
   };
 
   useEffect(() => {
     if (isVisibile) {
       if (!playing) {
-        if(!isMuted ){
+        if (!isMuted) {
           playerRef.current.muted = false;
         }
         playerRef.current.play();
-       
         setPlaying(true)
       }
     }
@@ -55,11 +52,12 @@ const Video = ({ url, name , index }) => {
 
   return (
     <div className="video">
-      <ReactHlsPlayer 
-      className="video_player snap-always snap-start"
-      loop preload="true" playerRef={playerRef} onClick={onVideoClick} 
-      muted={true}
-      src={url}
+      <ReactHlsPlayer
+      playsInline
+        className="video_player snap-always snap-start"
+        loop preload="true" playerRef={playerRef} onClick={onVideoClick}
+        muted={true}
+        src={url}
       />
       <p className='absolute z-50 top-[80%] left-4 text-white text-base font-semibold'>@{name}</p>
     </div>
