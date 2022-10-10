@@ -59,7 +59,7 @@ const Video = ({ url, name, index }) => {
         muted={true}
         src={url}
       />
-      <p className='absolute z-50 top-[80%] left-4 text-white text-base font-semibold'>@{name}</p>
+      <p className='absolute z-50 top-[75%] left-4 text-white text-base font-semibold'>@{name}</p>
     </div>
   );
 };
